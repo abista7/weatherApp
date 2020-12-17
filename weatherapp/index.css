@@ -1,0 +1,237 @@
+*{
+  margin: 0;
+}
+
+@keyframes jump {
+    0%   {margin-top: 30px}
+    100% {margin-top: 0px}
+}
+
+#page{
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #373E40;
+  font-family: 'Patua One', cursive;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #373E40;
+  
+}
+
+#ballplay{
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#balls{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball{
+  height: 20px;
+  width: 20px;
+  background: green;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+
+#ball_1{
+  animation: jump 0.5s linear infinite alternate;
+}
+#ball_2{
+  animation: jump 0.5s linear infinite alternate;
+  animation-delay: 0.3s;
+}
+#ball_3{
+  animation: jump 0.5s linear infinite alternate;
+  animation-delay: 0.6s;
+}
+#app{
+  min-height: 500px;
+  width: 320px;
+  background: white;
+  background: #0052D4; 
+  background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); 
+  background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+
+
+#today{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+  box-sizing: border-box;
+}
+
+#weekly{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+#figure, #summary{
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+
+#citySearch {
+  height: 30px;
+  width: 90%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  color: grey;
+}
+
+input:focus {
+  outline: none;
+}
+
+#citySearch:hover {
+  border: 2px solid purple;
+}
+
+#citylist {
+    border: 1px solid grey;
+    position: absolute;
+    left: 15px;
+    padding-left: 0px;
+    font-size: 12px;
+    text-align: left;
+    height: 100px;
+    width: 290px;
+    overflow: scroll;
+}
+
+.city {
+    list-style: none;
+    border-bottom: 1px solid grey;
+    display: block;
+    padding: 4px 0px 4px 20px;
+    cursor: pointer;
+}
+
+
+#figure{
+  height: 100px;
+  line-height: 100px;
+  font-size: 80px;
+}
+
+
+#summary{
+  font-size: 25px;
+}
+
+#location{
+  position: relative;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  font-size: 17px;
+  height: 180px;
+}
+
+.fa{
+  font-size: 25px;
+}
+#time{
+  font-size: 15px;
+  color: white;
+}
+#weekly{
+  height: 150px;
+}
+
+.week{
+  height: 120px;
+  width: 45px;
+  margin: 0 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Muli', sans-serif;
+  transition: all ease 1s;
+}
+
+.week:hover .day:after{
+  background: orange;
+}
+
+.week:hover {
+  margin-bottom: 20px;
+}
+.week:hover .day-temp{
+  font-size: 16px;
+}
+.day, .day-temp{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.day-temp{
+  font-size: 11px;
+}
+.day:after{
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+}
+
+@media only screen and (max-width: 450px) {
+  #app{
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.clock {
+position: relative;
+  width: 100%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%)         translateY(-50%);
+  font-size: 30px;
+  font-family: Orbitron;
+  letter-spacing: 4px;
+}

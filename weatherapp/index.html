@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli|Patua+One|Patua+One|Uncial+Antiqua" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="page">
+        <div id="loading">
+          <div id="ballplay">
+            <div id="balls">
+              <div id= "ball_1" class="ball"></div>
+              <div id= "ball_2" class="ball"></div>
+              <div id= "ball_3"class="ball"></div>
+            </div>
+      
+            <p>Fetching weather data...</p>
+          </div>
+        </div>
+      
+        <div id="app">
+          <div id="today"> 
+            <div id="icon">
+              <canvas id="today-icon" width="140" height="140" >  </canvas>
+            </div>
+            <div id="temp">
+              <div id="figure">
+                <span id="temperature">10</span><span>&#176;</span>
+                
+              </div>
+              <div id="summary">
+                Cloudy
+              </div>
+              <span id="time"> 
+                Mon Dec 25 2017 
+              </span>
+              
+            </div>
+            
+          </div>
+          
+          <div id="location">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <br>
+            <span id="city"></span>, <span id="state"></span> 
+            <br>
+            <input id = "citySearch" type = "text" placeholder = "Enter a city"/>
+            <ul id="citylist">
+            </ul>
+            
+        </div>
+          <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+          <div id="weekly">
+            <div class="week">
+              <div id = "day_1" class="day">
+                MON
+              </div>
+              <canvas id="icon_1" width="45" height="45" >  </canvas>
+              <div id= "day-temp_1" class="day-temp">
+                <span id="day-temp_1_h">30</span>&#8645;<span id="day-temp_1_l">23</span>
+              </div>
+            </div>
+            <div class="week">
+              <div id = "day_2" class="day">
+                TUE
+              </div>
+              <canvas id="icon_2" width="45" height="40" >  </canvas>
+              <div id= "day-temp_2" class="day-temp">
+                <span id="day-temp_2_h">30</span>&#8645;<span id="day-temp_2_l">23</span>
+              </div>
+            </div>
+            <div class="week">
+              <div id = "day_3" class="day">
+                WED
+              </div>
+              <canvas id="icon_3" width="45" height="40" >  </canvas>
+              <div id= "day-temp_3" class="day-temp">
+                <span id="day-temp_3_h">30</span>&#8645;<span id="day-temp_3_l">23</span>
+              </div>
+            </div>
+            <div class="week">
+              <div id = "day_4" class="day">
+                THU
+              </div>
+              <canvas id="icon_4" width="45" height="40" >  </canvas>
+              <div id= "day-temp_4" class="day-temp">
+                <span id="day-temp_4_h">30</span>&#8645;<span id="day-temp_4_l">23</span>
+              </div>
+            </div>
+            <div class="week">
+              <div id = "day_5" class="day">
+                FRI
+              </div>
+              <canvas id="icon_5" width="45" height="40" >  </canvas>
+              <div id= "day-temp_5" class="day-temp">
+                <span id="day-temp_5_h">30</span>&#8645;<span id="day-temp_5_l">23</span>
+              </div>
+            </div>
+            <div class="week">
+              <div id = "day_6" class="day">
+                SAT
+              </div>
+              <canvas id="icon_6" width="45" height="40" >  </canvas>
+              <div id= "day-temp_6" class="day-temp">
+                <span id="day-temp_6_h">30</span>&#8645;<span id="day-temp_6_l">23</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="./index.js"></script>
+      <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+  
+  
+</body>
+</html>
